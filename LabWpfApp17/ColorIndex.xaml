@@ -1,0 +1,33 @@
+﻿<UserControl x:Class="LabWpfApp17.ColorIndex"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Name="colorIndex">
+
+    <Grid>
+    <Grid.RowDefinitions>
+             <RowDefinition Height="auto"></RowDefinition>
+             <RowDefinition Height="auto"></RowDefinition>
+             <RowDefinition Height="auto"></RowDefinition>
+       </Grid.RowDefinitions>
+       <Grid.ColumnDefinitions>
+             <ColumnDefinition></ColumnDefinition>
+             <ColumnDefinition Width="auto"></ColumnDefinition>
+       </Grid.ColumnDefinitions>
+       <Slider Name="sliderRed" Minimum="0" Maximum="255"
+                Margin="{Binding ElementName= colorIndex, Path=Padding}"
+                Value="{Binding ElementName=colorIndex, Path=Red}"></Slider>
+       <Slider Name="sliderGreen" Minimum="0" Maximum="255" Grid.Row="1"
+                Margin="{Binding ElementName= colorIndex, Path=Padding}"
+                Value="{Binding ElementName=colorIndex, Path=Green}"></Slider>
+       <Slider Name="sliderBlue" Minimum="0" Maximum="255" Grid.Row="2"
+                Margin="{Binding ElementName= colorIndex, Path=Padding}"
+                Value="{Binding ElementName=colorIndex, Path=Blue}"></Slider>
+       <Rectangle Grid.Column="1" Grid.RowSpan="3" Width="50" Stroke="Black" StrokeThickness="3"
+                   StrokeDashArray="2 1">
+           <Rectangle.Fill>
+                <SolidColorBrush Color="{Binding ElementName=colorIndex, Path=Color}"></SolidColorBrush>
+           </Rectangle.Fill>
+       </Rectangle>
+    </Grid>
+</UserControl>
+ 

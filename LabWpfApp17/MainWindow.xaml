@@ -1,0 +1,12 @@
+﻿<Window x:Class="LabWpfApp17.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:LabWpfApp17"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <local:ColorIndex x:Name="colorIndex" HorizontalAlignment="Center" Width="250" Height="60"/>
+            <TextBlock x:Name="txb" Text="Привет!!!" Margin="10" Padding="10" Background="AntiqueWhite"/>
+        </StackPanel>
+    </Grid>
+</Window>
